@@ -3,7 +3,6 @@ package com.taskqueue.task_queue_engine.job;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import java.time.OffsetDateTime;
 import java.util.UUID;
 
@@ -23,7 +22,6 @@ public class JobService {
                 .runAt(request.getRunAt() != null ? request.getRunAt() : OffsetDateTime.now())
                 .status(JobStatus.PENDING)
                 .build();
-
         return jobRepository.save(job);
     }
 

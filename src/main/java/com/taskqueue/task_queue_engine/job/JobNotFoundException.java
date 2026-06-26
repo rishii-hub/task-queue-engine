@@ -1,6 +1,5 @@
 package com.taskqueue.task_queue_engine.job;
 
-
 import java.util.UUID;
 
 public class JobNotFoundException extends RuntimeException {
